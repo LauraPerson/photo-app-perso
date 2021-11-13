@@ -1,3 +1,6 @@
 <% @series.each do |serie| %>
   <%= link_to serie.name, series_path(serie.id) %>
 <% end %> 
+
+
+<%= cl_image_tag("grattetonchomage_bleh49", width: 400, height: 300, crop: :fill) %>
