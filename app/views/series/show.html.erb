@@ -7,6 +7,7 @@
         <%= image.name %>
         <%= image.description %>
         <%= image.location %>
+        <%= image_tag(url_for(image.photo)) %>
       </div>
     <% end %>
   <% end %>
