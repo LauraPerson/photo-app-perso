@@ -1,0 +1,13 @@
+<%= @serie.name %>
+
+<div class="cards">
+  <% @serie.images.each do |image| %>
+    <%= link_to series_image_path(image.id) do %>
+      <div class="image-card">
+        <%= image.name %>
+        <%= image.description %>
+        <%= image.location %>
+      </div>
+    <% end %>
+  <% end %>
+</div>
