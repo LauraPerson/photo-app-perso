@@ -4,17 +4,17 @@ class ImagesController < ApplicationController
     Image.all
   end
 
-  def create 
+  def create
     Image.new(image)
-  end 
+  end
 
-  def show 
+  def show
     @image = Image.find(params[:id])
-  end 
+  end
 
 
   def params_image
-    params.require(:image).permit(:name, :description, :technique, :location, :date, :camera)
-  end 
+    params.require(:image).permit(:name, :description, :technique, :location, :date, :camera, :photo)
+  end
 
 end

@@ -30,6 +30,9 @@ gem 'dotenv-rails', groups: [:development, :test]
 
 gem 'cloudinary', '~> 1.16.0'
 
+gem 'activeadmin', github: 'activeadmin/activeadmin'
+gem 'inherited_resources', github: 'activeadmin/inherited_resources'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 

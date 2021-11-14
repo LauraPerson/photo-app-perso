@@ -12,7 +12,7 @@ Serie.destroy_all
 
 5.times do |n|
   serie = Serie.create!(
-    name: "Test #{n+1}",
+    name: "Serie #{n+1}",
     description: Faker::Quote.matz
   )
   puts "created #{serie.id} series"
@@ -21,7 +21,7 @@ end
 10.times do |n|
   serie = Serie.all.sample
   image = Image.create!(
-    name: "Test #{n+1}",
+    name: "Image #{n+1}",
     description: Faker::Quote.matz,
     technique: "Analog",
     location: "Paris",
@@ -30,5 +30,5 @@ end
     serie: serie
   )
 
-  puts "created #{image.id} series"
+  puts "created #{image.id} images"
 end
