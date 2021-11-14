@@ -36,3 +36,16 @@
     </ul>
   </div>
 </div>
+
+<div id="lateral-menu">
+  <div>
+    <% Serie.all.each do |serie| %>
+      <div class='menu-item'>
+        <p class="sparkles">✨</p>
+        <%=link_to serie.name, series_path(serie.id) %>
+      </div>
+      <br>
+    <% end %>
+  </div>
+</div>
+
