@@ -1,18 +1,30 @@
 // Import Google fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700|Work+Sans:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;700&family=Nanum+Pen+Script&family=Roboto:wght@100;400;700&display=swap');$body-font: "Work Sans", "Helvetica", "sans-serif";
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Nanum+Pen+Script&family=Roboto:wght@100;400;700&display=swap');
 
-// Define fonts for body and headers
-$body-font: "Work Sans", "Helvetica", "sans-serif";
 $headers-font: "Nunito", "Helvetica", "sans-serif";
+
+$text: 'Roboto', sans-serif;
+$headers: 'Amatic SC', cursive;
+
 
 h1 {
   font-size: 24px;
+  font-family: $headers;
 }
 
 p {
   font-size: 12px;
+  font-family: $text;
 }
 
 a {
   text-decoration: none;
+  font-family: $text;
+
+}
+
+.lauraperson {
+  font-family: $headers;
 }

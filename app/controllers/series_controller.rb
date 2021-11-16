@@ -1,7 +1,8 @@
 class SeriesController < ApplicationController
 
   def index
-    @series = Serie.all
+    @series = policy_scope(Serie.all)
+    authorize @series
   end
 
   def create 
@@ -10,6 +11,7 @@ class SeriesController < ApplicationController
 
   def show
     @serie = Serie.find(params[:id])
+    authorize @serie
   end 
 
  

@@ -10,6 +10,25 @@
 Serie.destroy_all
 
 
+2.times do |n|
+  user = User.create!(
+    email: "admin#{n+1}@laura.fr",
+    password: "laura29",
+    admin: true
+  )
+  puts "created #{user.id} admin users"
+end
+
+2.times do |n|
+  user = User.create!(
+    email: "user#{n+1}@laura.fr",
+    password: "laura29",
+    admin: false
+  )
+
+  puts "created #{user.id} normal users"
+end
+
 5.times do |n|
   serie = Serie.create!(
     name: "Serie #{n+1}",
