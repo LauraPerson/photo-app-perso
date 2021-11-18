@@ -1,1 +1,8 @@
-<div class="lauraperson">Laura Person</div>
+<div class="continer container-main">
+  <div class="flex" data-controller="sortable">
+    <div class="home-photo  <%= current_user.admin? ? "draggable" : "" %>" style="background-image: url(<%= image_path("home1.jpg")%>)">
+    </div>
+    <div class="home-photo <%= current_user.admin? ? "draggable" : "" %> " style="background-image: url(<%= image_path("home2.jpg")%>)">
+    </div>
+  </div>
+</div>
