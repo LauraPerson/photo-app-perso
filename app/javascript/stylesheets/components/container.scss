@@ -1,4 +1,13 @@
+#profile-container {
+
+  #profile-picture {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+  }
+
+}
+
 .container-main {
-  @apply bg-white;
-  margin-left: 15vw;
+  margin-top: 40px;
 }
