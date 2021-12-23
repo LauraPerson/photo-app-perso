@@ -1,0 +1,23 @@
+<div class="container-centered mx-auto relative">
+<%= link_to series_path(Serie.first.id), class:"image_link", id:"image-link-1" do %>
+  <%= image_tag(url_for(Serie.first.main_image))%>
+<% end %>
+<%= link_to series_path(Serie.second.id), class:"image_link", id:"image-link-2" do %>
+  <%= image_tag(url_for(Serie.second.main_image))%>
+<% end %>
+<%= link_to series_path(Serie.third.id), class:"image_link", id:"image-link-3"  do %>
+  <%= image_tag(url_for(Serie.third.main_image))%>
+<% end %>
+<%= link_to series_path(Serie.fourth.id), class:"image_link", id:"image-link-4"  do %>
+  <%= image_tag(url_for(Serie.fourth.main_image))%>
+<% end %>
+<%= link_to series_path(Serie.fifth.id), class:"image_link", id:"image-link-5"  do %>
+  <%= image_tag(url_for(Serie.fifth.main_image))%>
+<% end %>
+
+</div>
+
+
+
+
+

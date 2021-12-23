@@ -11,10 +11,12 @@ ActiveAdmin.register Serie do
     f.inputs "New Serie" do
       f.input :name
       f.input :description
+      f.input :main_image, as: :file
+
     end
     f.actions
   end
 
 
-  permit_params :name, :description
+  permit_params :name, :description, :main_image
 end
