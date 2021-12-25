@@ -1,7 +1,14 @@
-<div class="container-100">
-  <div class="container-85">
-    <h1> <%= @serie.name %></h1>
-    <div class="cards">
+<div class="container-bordeless flex">
+  <div class="gallery-text">
+    <h2 class="gallery-name">
+      <%= @serie.name %>
+    </h2>
+    <p>
+      <%= @serie.description %>
+    </p>
+  </div>
+  <div class="gallery">
+    <div class="gallery-images flex">
       <% @serie.images.each do |image| %>
         <%= link_to series_image_path(image.serie.id, image.id) do %>
           <div class="image-card">
