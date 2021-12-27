@@ -29,9 +29,26 @@ p {
 a {
   text-decoration: none;
   font-family: $text;
+}
+
+
+
+@media screen and (max-width: 992px) {
 
 }
 
-.lauraperson {
-  font-family: $headers;
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+  a {
+    font-size: 14px;
+  }
+  
 }
+
+@media screen and (max-width: 350px) {
+  a {
+    font-size: 14px;
+  }
+
+}
+

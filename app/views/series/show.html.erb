@@ -1,4 +1,4 @@
-<div class="container-bordeless flex">
+<div class="container-gallery">
   <div class="gallery-text">
     <h2 class="gallery-name">
       <%= @serie.name %>
@@ -8,11 +8,10 @@
     </p>
   </div>
   <div class="gallery">
-    <div class="gallery-images flex">
+    <div class="gallery-images">
       <% @serie.images.each do |image| %>
         <%= link_to series_image_path(image.serie.id, image.id) do %>
           <div class="image-card">
-            <%= image.name %><br>
             <% if image.photo.attached? %>
               <%= image_tag(url_for(image.photo)) %>
             <% end %>
@@ -21,4 +20,4 @@
       <% end %>
     </div>
   </div>
-</div>
+</div>    

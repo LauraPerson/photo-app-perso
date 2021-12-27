@@ -23,3 +23,40 @@
   font-weight: 400;
 }
 
+
+@media screen and (max-width: 992px) {
+  #navbar-title {
+    font-size: 24px;
+  }
+  
+  .main-navbar {
+    height: 120px;
+    background-color: white;
+    z-index: 1000;
+  }
+}
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+  #navbar-title {
+    font-size: 24px;
+  }
+
+  .main-navbar {
+    height: 120px;
+    background-color: white;
+    z-index: 1000;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  #navbar-title {
+    font-size: 20px;
+  }
+
+  .main-navbar {
+    height: 120px;
+    background-color: white;
+    z-index: 1000;
+  }
+}
