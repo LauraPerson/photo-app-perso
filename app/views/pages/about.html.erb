@@ -4,12 +4,14 @@
     <h2 class="text-subtitle">Bio</h2>
       <p><%= @biography %></p>
     <h2 class="text-subtitle">Curriculum</h2>
-    <h2 class="text-subtitle">Expos, concours</h2>
-    <h2 class="text-subtitle">Contact</h2>
-    <div>
-      <a href="mailto:laura.martin.person@gmail.com">laura.martin.person@gmail.com</a><br>
-      <a href="https://www.instagram.com/laura_personne/"><i class="fab fa-instagram">@laura_personne</i></a>
-    </div>
+    <% @events.each do |event| %>
+      <div class="flex items-center">
+        <%= event.year %>&nbsp&nbsp&nbsp
+        <p><%= event.object %>,&nbsp</p>
+        <p><em><%= event.place %></em></p>
+      </div>
+    <% end%>
+
 
 
     </div>

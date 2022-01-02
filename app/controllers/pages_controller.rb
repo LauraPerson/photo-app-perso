@@ -10,5 +10,6 @@ class PagesController < ApplicationController
 
   def about
     @biography = Biography.first.content
+    @events = Event.all.order(year: :DESC)
   end
 end

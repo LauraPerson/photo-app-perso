@@ -7,7 +7,7 @@ ActiveAdmin.register Biography do
   end
 
   form do |f|
-    f.inputs "New Serie" do
+    f.inputs "Bio" do
       f.input :content
     end
     f.actions
