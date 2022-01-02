@@ -29,6 +29,20 @@
   }
 }
 
+#contact-container {
+  display: flex;
+  #contact-picture {
+    display: flex;
+    width: 400px;
+    height: 400px;
+    object-fit: contain;
+  }
+  i {
+    font-size: 18px;
+    margin-right: 10px;
+  }
+}
+
 .container-centered {
   position: relative;
   width: 1000px;

@@ -9,5 +9,7 @@ class PagesController < ApplicationController
   end
 
   def about
+    @biography = Biography.first.content
+    @events = Event.all.order(year: :DESC)
   end
 end

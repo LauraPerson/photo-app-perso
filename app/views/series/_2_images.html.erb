@@ -1,0 +1,8 @@
+<div class="container mx-auto flex items-center justify-center">
+  <%= link_to series_path(Serie.first.id), class:"mx-2", id:"" do %>
+    <%= image_tag Serie.first.main_image.variant(saver: { quality: 80 })%>
+  <% end %>
+  <%= link_to series_path(Serie.second.id), class:"mx-2", id:"" do %>
+    <%= image_tag Serie.second.main_image.variant(saver: { quality: 80 })%>
+  <% end %>
+</div>
