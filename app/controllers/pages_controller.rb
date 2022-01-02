@@ -9,10 +9,10 @@ class PagesController < ApplicationController
   end
 
   def about
-    unless Biography.empty?
+    unless Biography.nil?
       @biography = Biography.first.content
     end
-    unless Event.empty?
+    unless Event.nil?
       @events = Event.all.order(year: :DESC)
     end
   end
