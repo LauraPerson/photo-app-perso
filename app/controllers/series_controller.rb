@@ -1,4 +1,6 @@
 class SeriesController < ApplicationController
+  skip_before_action :authenticate_user!, only: :index
+
 
   def index
     @series = policy_scope(Serie.all)
