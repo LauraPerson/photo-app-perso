@@ -12,7 +12,6 @@
     "popper.js": "^1.16.1",
     "postcss": "7",
     "stimulus": "^3.0.1",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat",
     "turbolinks": "^5.2.0",
     "webpack": "^4.46.0",
     "webpack-cli": "^3.3.12"
