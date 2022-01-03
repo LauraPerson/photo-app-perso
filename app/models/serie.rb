@@ -4,4 +4,6 @@ class Serie < ApplicationRecord
 
 
   validate :name
+  validate :main_image
+
 end
