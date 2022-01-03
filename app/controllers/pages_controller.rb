@@ -9,12 +9,12 @@ class PagesController < ApplicationController
   end
 
   def about
-    unless Biography.nil?
+    if Biography.first.present?
       @biography = Biography.first.content
     else
       @biography = "Write your biography"
     end
-    unless Event.nil?
+    if Event.first.present?
       @events = Event.all.order(year: :DESC)
     else
       @events = "Enter an event"

@@ -4,7 +4,7 @@
     <h2 class="text-subtitle">Bio</h2>
       <p><%= @biography %></p>
     <h2 class="text-subtitle">Curriculum</h2>
-    <% unless Event.nil? %>
+    <% if Event.first.present? %>
       <% @events.each do |event| %>
         <div class="flex items-center">
           <%= event.year %>&nbsp&nbsp&nbsp
