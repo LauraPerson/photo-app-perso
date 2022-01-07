@@ -1,15 +1,25 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>PhotoApp</title>
+    <title>Laura Martin Person</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+
+    <meta name="description" content="Laura Martin Person's work in visual arts">
+    <!-- Facebook Open Graph data -->
+    <meta property="og:title" content="Laura Martin Person" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="example.jpg" />
+    <meta property="og:description" content="Laura Martin Person's work in visual arts" />
+    <meta property="og:site_name" content="Laura Martin Person" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
+    <%= favicon_link_tag asset_path('favicon.png') %>
+
   </head>
 
   <body class="">
