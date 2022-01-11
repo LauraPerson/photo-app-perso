@@ -10,13 +10,11 @@
   <div class="gallery">
     <div class="gallery-images">
       <% @serie.images.each do |image| %>
-        <%= link_to series_image_path(image.serie.id, image.id) do %>
-          <div class="image-card">
-            <% if image.photo.attached? %>
-              <%= image_tag(url_for(image.photo)) %>
-            <% end %>
-          </div>
-        <% end %>
+        <div class="image-card">
+          <% if image.photo.attached? %>
+            <%= image_tag(url_for(image.photo)) %>
+          <% end %>
+        </div>
       <% end %>
     </div>
   </div>
