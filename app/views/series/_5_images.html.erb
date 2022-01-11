@@ -1,26 +1,26 @@
 <div class="container-centered mx-auto">
   <% if Serie.first.main_image.attached? %>
-    <%= link_to series_path(Serie.first.id), class:"image_link", id:"image-link-1" do %>
+    <%= link_to series_path(Serie.first.id), class:"image_link image-trans", id:"image-link-1" do %>
       <%= image_tag Serie.first.main_image.variant(saver: { quality: 80 })%>
     <% end %>
   <% end %>
   <% if Serie.first.main_image.attached? %>
-    <%= link_to series_path(Serie.second.id), class:"image_link", id:"image-link-2" do %>
+    <%= link_to series_path(Serie.second.id), class:"image_link image-trans", id:"image-link-2" do %>
       <%= image_tag Serie.second.main_image.variant(saver: { quality: 80 })%>
     <% end %>
   <% end %>
   <% if Serie.first.main_image.attached? %>
-    <%= link_to series_path(Serie.third.id), class:"image_link", id:"image-link-3"  do %>
+    <%= link_to series_path(Serie.third.id), class:"image_link image-trans", id:"image-link-3"  do %>
       <%= image_tag Serie.third.main_image.variant(saver: { quality: 80 })%>
     <% end %>
   <% end %>
   <% if Serie.first.main_image.attached? %>
-    <%= link_to series_path(Serie.fourth.id), class:"image_link", id:"image-link-4"  do %>
+    <%= link_to series_path(Serie.fourth.id), class:"image_link image-trans", id:"image-link-4"  do %>
       <%= image_tag Serie.fourth.main_image.variant(saver: { quality: 80 })%>
     <% end %>
   <% end %>
   <% if Serie.first.main_image.attached? %>
-    <%= link_to series_path(Serie.fifth.id), class:"image_link", id:"image-link-5"  do %>
+    <%= link_to series_path(Serie.fifth.id), class:"image_link image-trans", id:"image-link-5"  do %>
       <%= image_tag Serie.fifth.main_image.variant(saver: { quality: 80 })%>
     <% end %>
   <% end %>
