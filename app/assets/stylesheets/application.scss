@@ -5,13 +5,22 @@
 // External libraries
 @import "font-awesome-sprockets";
 @import "font-awesome";
+@import "bootstrap/scss/bootstrap"; /* picks it up in node_modules! */
+
 
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
 
-
-
+a {
+  text-decoration: none;
+  color: black;
+}
 .hidden {
   display: none;
+}
+
+body {
+
+  padding-bottom: 5%;
 }

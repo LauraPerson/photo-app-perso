@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   devise_for :users
-  root to: 'series#index'
+  root to: 'pages#home'
 
   get 'about', to:'pages#about'
   get 'contact', to:'pages#contact'

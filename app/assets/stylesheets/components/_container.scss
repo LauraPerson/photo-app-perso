@@ -15,17 +15,38 @@
   margin-top: 40px;
 }
 
+.container-center {
+  width: 70vw;
+  margin: 0 auto;
+}
+
 .container-gallery {
   display: flex;
+}
+
+.container-home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  img {
+    width: 80%;
+    object-fit: cover;
+  }
+}
+
+.text-container {
+  width: 60%;
 }
 
 #profile-container {
   display: flex;
   #profile-picture {
     display: flex;
-    width: 400px;
+    width: 40%;
     height: 400px;
     object-fit: cover;
+    object-position: left;
+
   }
 }
 
@@ -72,7 +93,7 @@
     #profile-picture {
       width: 200px;
       height: 200px;
-      margin-left: 20px
+      margin-left: 20px;
     }
   }
 
@@ -108,5 +129,12 @@
   }
   .container-main {
     margin: 20px auto;
+  }
+
+  .container-home {
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
   }
 }
