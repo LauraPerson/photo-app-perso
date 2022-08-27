@@ -1,11 +1,12 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:contact, :about] 
+  skip_before_action :authenticate_user!, only: [:contact, :about, :home] 
 
   def home
     @series = Serie.all
   end
 
   def contact
+    @contact = Contact.new
   end
 
   def about

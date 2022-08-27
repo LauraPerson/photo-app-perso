@@ -14,7 +14,6 @@
     <meta property="og:site_name" content="Laura Martin Person" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
@@ -24,18 +23,8 @@
 
   <body class="">
     <%= render 'shared/navbar' %>
-
    <%= render 'shared/flashes' %>
     <main class="container mx-auto mt-2 px-5 flex">
-
-    <div class="container">
-      <br>
-      <% flash.each do |key, message| %>
-        <p class="alert alert-<%= key %>"><%= message %></p>
-      <% end %>
-    </div>
-  
-
     <%= yield %>
     </main>
   </body>
