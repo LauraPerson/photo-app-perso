@@ -7,6 +7,9 @@ Rails.application.routes.draw do
   get 'contact', to:'pages#contact'
 
 
+  resources :contacts, only: [:new, :create]
+
+
   resources :series, only: [:new, :create, :index, :show] do
     resources :images, only: [:new, :create, :show]
   end
