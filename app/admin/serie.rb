@@ -11,8 +11,7 @@ ActiveAdmin.register Serie do
     f.inputs "New Serie" do
       f.input :name
       f.input :description
-      f.input :photos, input_html: { multiple: true }
-
+      f.input :photos, as: :file,  input_html: { multiple: true }
     end
     f.actions
   end

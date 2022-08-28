@@ -7,7 +7,7 @@
   </div>
   <% @serie.photos.each do |photo| %>
     <div class="grid-item overlay">
-        <%= image_tag(url_for(photo.key)), width: '500px', data: {fancybox: 'gallery'}  %>
+        <%= image_tag(url_for(photo.key)), input_html: { data: {fancybox: 'gallery'} }  %>
     </div>
   <% end %>
 </div>
