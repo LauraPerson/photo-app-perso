@@ -4,6 +4,7 @@ import { Controller } from "stimulus"
 
 
 export default class extends Controller {
+  static targets = ["items"]
 
   connect() {
     this.masonry = new Masonry( this.element, {
@@ -12,11 +13,9 @@ export default class extends Controller {
       columnWidth:  '.grid-item',
       // fitWidth: true, 
       fitWidth: true, 
-
-
     });
 
-    console.log(this.element)
+    console.log(this.itemsTarget.children.className)
   }
 
 
