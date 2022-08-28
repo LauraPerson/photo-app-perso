@@ -5,7 +5,10 @@
 // External libraries
 @import "font-awesome-sprockets";
 @import "font-awesome";
-@import "bootstrap/scss/bootstrap"; /* picks it up in node_modules! */
+@import "bootstrap/scss/bootstrap";
+@import "fancyapps/ui/dist/fancybox.css";
+
+ /* picks it up in node_modules! */
 
 
 // Your CSS partials
@@ -20,7 +23,42 @@ a {
   display: none;
 }
 
+.flex-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
 body {
 
   padding-bottom: 5%;
+}
+
+///////////////////@at-root
+/// * { box-sizing: border-box; }
+
+body { font-family: sans-serif; }
+
+/* ---- grid ---- */
+
+.display-none {
+  display: none;
+}
+
+.display {
+  display: block;
+}
+
+
+a {;
+  text-decoration: none !important;
+  &:hover {
+    color: black !important;
+    font-weight: 500;
+  }
+}
+
+.link {
+  color: black !important;
 }

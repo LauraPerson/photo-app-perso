@@ -8,9 +8,11 @@ Rails.application.routes.draw do
 
 
   resources :contacts, only: [:new, :create]
+  resources :users, only: [:show]
 
 
-  resources :series, only: [:new, :create, :index, :show] do
+
+  resources :series do
     resources :images, only: [:new, :create, :show]
   end
 

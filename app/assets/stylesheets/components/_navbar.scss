@@ -16,14 +16,33 @@
 }
 
 
-.nav-link {
+.navbar-link {
   font-family: $text;
   font-weight: 100;
+  padding: 0;
+  color: black;
 }
 
-.nav-link:hover {
+.navbar-link:hover {
   font-weight: 400;
 }
+
+.navbar-dropdown {
+  width: 200px;
+  background-color: white;
+  border-radius: 10px;
+  position: absolute;
+  right: 20px;
+  top: 55px;
+  padding: 5px;
+  box-shadow: 10px 10px 30px rgba(0,0,0,0.4);
+  z-index: 100;
+}
+
+.dropdown-item:active {
+  background-color: white !important;
+}
+
 
 
 @media screen and (max-width: 992px) {
