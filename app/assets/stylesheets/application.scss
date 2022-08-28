@@ -49,3 +49,16 @@ body { font-family: sans-serif; }
 .display {
   display: block;
 }
+
+
+a {;
+  text-decoration: none !important;
+  &:hover {
+    color: black !important;
+    font-weight: 500;
+  }
+}
+
+.link {
+  color: black !important;
+}
