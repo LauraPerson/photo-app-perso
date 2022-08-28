@@ -14,12 +14,13 @@ class SeriesController < ApplicationController
   end 
 
   def create
+    
     @serie = Serie.new(params_serie)
     @serie.save 
     authorize @serie
 
     flash.alert = "Nouvealle série ajoutée"
-    redirect_to series_index_path
+    redirect_to series_path(@serie)
   end
 
   def edit

@@ -1,11 +1,11 @@
 <div class="container">
   <div class="row flex-center">
     <div class="col-12 col-m-6 col-xl-4 my-4">
-      <h2>Ajouter une nouvelle série</h2>
-      <%= simple_form_for @serie, url: series_path, method: :post do |f| %>
-        <%= f.input :titnamele, label:"Nom"  %>
-        <%= f.input :photo, as: :file, input_html: {multiple: true} label:"Photos de la série"  %>
-        <%= f.submit "Ajouter une série", class:"btn btn-primary" %>
+      <h2 class="my-3">Ajouter une nouvelle série</h2>
+      <%= simple_form_for @serie, url: series_index_path, method: :post do |f| %>
+        <%= f.input :name, label:"Nom"  %>
+        <%= f.input :photos, as: :file, input_html: {multiple: true}, label:"Photos de la série" %>
+        <%= f.submit "Ajouter une série", class:"btn btn-primary my-3" %>
       <% end %>
     </div>
   </div>
