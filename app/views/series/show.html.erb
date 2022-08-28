@@ -1,21 +1,13 @@
-<div class="container-gallery">
-  <div class="gallery-text">
-    <h2 class="gallery-name">
+<div data-controller="gallery" class="grid gallery" data-masonry>
+  <div class="grid-item">
       <%= @serie.name %>
-    </h2>
     <p>
       <%= @serie.description %>
     </p>
   </div>
-  <div class="gallery">
-    <div class="gallery-images">
-      <% @serie.images.each do |image| %>
-        <div class="image-card">
-          <% if image.photo.attached? %>
-            <%= image_tag(url_for(image.photo)) %>
-          <% end %>
-        </div>
-      <% end %>
+  <% @serie.photos.each do |photo| %>
+    <div class="grid-item overlay">
+        <%= image_tag(url_for(photo.key)), width: '500px', data: {fancybox: 'gallery'}  %>
     </div>
-  </div>
-</div>    
+  <% end %>
+</div>

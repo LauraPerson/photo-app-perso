@@ -1,9 +1,5 @@
 class Serie < ApplicationRecord
   has_many :images, dependent: :destroy
-  has_one_attached :main_image
-
-
+  has_many :photos
   validate :name
-  validate :main_image
-
 end
