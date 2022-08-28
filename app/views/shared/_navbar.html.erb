@@ -1,7 +1,31 @@
 <div class="d-flex flex-column align-items-center sticky top-0 main-navbar">
   <%= link_to "Laura Martin Person", root_path , id: "navbar-title" %>
     <div class="d-flex">
-      <%= link_to "Séries", series_index_path , class: "nav-link  m-2" %>
+    <a href="" data-controller="dropdown-container"
+            data-action="click->dropdown#openDropdown"
+            >
+      Séries
+      <div 
+          data-dropdown-target="dropdown"
+          class="navbar-dropdown display">
+          ITEMS
+      </div>
+    </a>
+
+
+
+
+ <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+    Dropdown button
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+    <li><a class="dropdown-item" href="#">Action</a></li>
+    <li><a class="dropdown-item" href="#">Another action</a></li>
+    <li><a class="dropdown-item" href="#">Something else here</a></li>
+  </ul>
+</div>
+
       <%= link_to "À propos", about_path, class: "nav-link m-2" %>
       <%= link_to "Contact", contact_path, class: "nav-link m-2" %>
       <% if user_signed_in? %>
