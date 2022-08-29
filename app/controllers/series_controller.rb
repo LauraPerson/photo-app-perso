@@ -35,10 +35,29 @@ class SeriesController < ApplicationController
     authorize @serie
 
     flash.alert = "Série Modifiée"
-
-
-    redirect_to series_index_path
+    redirect_to series_path(@serie)
   end
+
+
+
+  def update
+    @serie = Serie.find(params[:id])
+      if @serie.update(params_serie.reject { |k| k["photos"] })
+        if params_serie[:photos].present?
+          params_serie[:photos].each do |photo|
+            @serie.photos.attach(photo)
+          end
+        end
+        flash.alert = "Série Modifiée"
+        redirect_to series_path(@serie)
+      else
+        flash.alert = "Série non modifiée"
+        redirect_to series_path
+      end
+      authorize @serie
+
+
+   end
 
   def show
     @serie = Serie.find(params[:id])
@@ -51,4 +70,6 @@ class SeriesController < ApplicationController
   def params_serie
     params.require(:serie).permit(:name, :description, photos: [])
   end 
+
+  
 end
