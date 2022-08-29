@@ -14,8 +14,8 @@
       <%= link_to "À propos", about_path, class: "navbar-link mx-3" %>
       <%= link_to "Contact", contact_path, class: "navbar-link mx-3" %>
       <% if user_signed_in? %>
-          <%= link_to "Dashboard", user_path(current_user), class:"d-flex align-items-center mx-3" %>
-          <%= link_to "Log out", destroy_user_session_path, method: :delete, class:"d-flex align-items-center mx-3" %>
+          <%= link_to "Dashboard", user_path(current_user), class:"d-flex align-items-center mx-3 admin-icon" %>
+          <%= link_to "Log out", destroy_user_session_path, method: :delete, class:"d-flex align-items-center mx-3 admin-icon" %>
       <% end %>
     </div>
 

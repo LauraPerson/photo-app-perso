@@ -1,8 +1,6 @@
 class SeriesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show] 
 
-
-
   def index
     @series = policy_scope(Serie.all)
     authorize @series
@@ -38,13 +36,12 @@ class SeriesController < ApplicationController
     redirect_to series_path(@serie)
   end
 
-
-
   def update
     @serie = Serie.find(params[:id])
       if @serie.update(params_serie.reject { |k| k["photos"] })
         if params_serie[:photos].present?
           params_serie[:photos].each do |photo|
+            raise
             @serie.photos.attach(photo)
           end
         end
@@ -55,14 +52,20 @@ class SeriesController < ApplicationController
         redirect_to series_path
       end
       authorize @serie
-
-
    end
 
   def show
     @serie = Serie.find(params[:id])
     authorize @serie
   end 
+
+  def remove_image
+    @image = ActiveStorage::Blob.find_signed(params[:id])
+    @image.purge
+    raise
+    # redirect_to series_path
+    skip_authorization
+  end
 
   private 
 

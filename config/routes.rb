@@ -10,11 +10,16 @@ Rails.application.routes.draw do
   resources :contacts, only: [:new, :create]
   resources :users, only: [:show]
 
-
-
   resources :series do
-    resources :images, only: [:new, :create, :show]
+    resources :images, only: [:new, :create]
   end
+
+  # delete '/images/:id', to: 'series#remove_image', as: :remove_image
+
+
+  
+  
+
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

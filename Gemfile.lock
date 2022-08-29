@@ -129,8 +129,8 @@ GEM
     faker (2.19.0)
       i18n (>= 1.6, < 2)
     ffi (1.15.4)
-    font-awesome-sass (5.15.1)
-      sassc (>= 1.11)
+    font-awesome-sass (6.1.2)
+      sassc (~> 2.0)
     formtastic (4.0.0)
       actionpack (>= 5.2.0)
     formtastic_i18n (0.7.0)
@@ -338,7 +338,7 @@ DEPENDENCIES
   devise
   dotenv-rails
   faker
-  font-awesome-sass
+  font-awesome-sass (~> 6.1)
   image_processing (~> 1.2)
   inherited_resources!
   jbuilder (~> 2.7)

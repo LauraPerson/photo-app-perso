@@ -46,8 +46,10 @@ gem 'image_processing', '~> 1.2'
 gem 'bootsnap', '>= 1.4.2', require: false
 
 gem 'autoprefixer-rails', '10.2.5'
-gem 'font-awesome-sass'
 gem 'simple_form'
+
+gem "font-awesome-sass", "~> 6.1"
+
 
 group :development, :test do
   gem 'pry-byebug'
