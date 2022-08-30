@@ -8,7 +8,12 @@
       </div>
     <% end %>
     <div class="my-3 text-justify">
-      <h3><%= @serie.name %></h3>
+      <div class="d-flex">
+        <h3><%= @serie.name %></h3>
+        <% if current_user %>
+          <i class="fa-solid fa-pen-to-square"></i>
+        <% end %>
+      </div>
       <p>
         <%= @serie.description %>
       </p>
@@ -18,7 +23,12 @@
 <div data-controller="gallery" class="grid gallery" data-masonry>
   <div class="grid-item">
     <div>
-      <h3><%= @serie.name %></h3>
+      <div class="d-flex">
+        <h3><%= @serie.name %></h3>
+        <% if current_user %>
+          <%= link_to "Modifier", edit_series_path(@serie),  class:"button" %>
+        <% end %>
+      </div>
       <p>
         <%= @serie.description %>
       </p>
