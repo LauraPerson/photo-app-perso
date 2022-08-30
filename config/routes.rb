@@ -14,7 +14,7 @@ Rails.application.routes.draw do
     resources :images, only: [:new, :create]
   end
 
-  # delete '/images/:id', to: 'series#remove_image', as: :remove_image
+  delete '/images/:id', to: 'series#remove_image', as: :remove_image
 
 
   

@@ -41,7 +41,6 @@ class SeriesController < ApplicationController
       if @serie.update(params_serie.reject { |k| k["photos"] })
         if params_serie[:photos].present?
           params_serie[:photos].each do |photo|
-            raise
             @serie.photos.attach(photo)
           end
         end
@@ -61,9 +60,8 @@ class SeriesController < ApplicationController
 
   def remove_image
     @image = ActiveStorage::Blob.find_signed(params[:id])
-    @image.purge
-    raise
-    # redirect_to series_path
+    
+    redirect_to series_path
     skip_authorization
   end
 

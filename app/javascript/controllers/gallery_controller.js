@@ -1,5 +1,4 @@
 import { Controller } from "stimulus"
-// import { Fancybox, Carousel, Panzoom } from "@fancyapps/ui";
 // import * as Masonry from 'masonry-layout';
 
 

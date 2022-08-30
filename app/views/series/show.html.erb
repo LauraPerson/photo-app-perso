@@ -7,20 +7,23 @@
       </p>
     </div>
   </div>
-
-  <% @serie.photos.each do |photo| %>
-    <div class="grid-item overlay" data-gallery-target="items" >
-      <% if current_user %>
-      
-        <%= link_to delete_image_attachment_path(:signed_id), method: :delete do %>
-          <i class="fa-solid fa-trash icon-trash"></i>
+  <div>
+    <% @serie.photos.each do |photo| %>
+      <div class="grid-item overlay" data-gallery-target="items" >
+        <% if current_user %>
+          <%= link_to remove_image_path(photo.signed_id), method: :delete do %>
+            <i class="fa-solid fa-trash icon-trash"></i>
+          <% end %>
         <% end %>
-      <% end %>
-      <%= link_to image_path(url_for(photo)),  data: {fancybox: 'gallery'} do %> 
-        <%= cl_image_tag photo.key %>
-      <% end %> 
-    </div>
-  <% end %>
+        <div class="grid-item overlay" data-gallery-target="items" >
+          <%= link_to image_path(url_for(photo)),  data: {fancybox: 'gallery'} do %> 
+            <%= cl_image_tag photo.key%>
+          <% end %> 
+        </div>
+      </div>
+    <% end %>
+  </div>
+
 </div>
 <%# 
         <%= link_to remove_image_path(photo.signed_id), method: :delete do %>
