@@ -7,6 +7,10 @@ export default class extends Controller {
   static targets = ["items"]
 
   connect() {
+
+    setTimeout(this.init_masonry, 50)
+  }
+  init_masonry = () => {
     this.masonry = new Masonry( this.element, {
       // options...
       itemSelector: '.grid-item',
@@ -14,6 +18,8 @@ export default class extends Controller {
       // fitWidth: true, 
       fitWidth: true, 
     });
+
+
 
     console.log(this.itemsTarget.children.className)
   }
