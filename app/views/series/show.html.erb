@@ -1,3 +1,20 @@
+<% if @serie.photos.count == 1 %>
+  <div class="grid gallery">
+    <% @serie.photos.each do |photo| %>
+      <div class="one-picture-grid" >
+        <%= link_to image_path(url_for(photo)) do %> 
+          <%= cl_image_tag photo.key%>
+        <% end %> 
+      </div>
+    <% end %>
+    <div class="my-3 text-justify">
+      <h3><%= @serie.name %></h3>
+      <p>
+        <%= @serie.description %>
+      </p>
+    </div>
+  </div>
+<% else %>
 <div data-controller="gallery" class="grid gallery" data-masonry>
   <div class="grid-item">
     <div>
@@ -7,13 +24,13 @@
       </p>
     </div>
   </div>
-
-  <% @serie.photos.each do |photo| %>
-    <div class="grid-item overlay" data-gallery-target="items" >
-      <%= link_to image_path(url_for(photo)),  data: {fancybox: 'gallery'} do %> 
-        <%= cl_image_tag photo.key%>
-      <% end %> 
-    </div>
+      <% @serie.photos.each do |photo| %>
+      <div class="grid-item overlay" data-gallery-target="items" >
+        <%= link_to image_path(url_for(photo)),  data: {fancybox: 'gallery'} do %> 
+          <%= cl_image_tag photo.key%>
+        <% end %> 
+      </div>
+    <% end %>
   <% end %>
 </div>
 
