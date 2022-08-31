@@ -8,7 +8,7 @@ export default class extends Controller {
 
   connect() {
 
-    setTimeout(this.init_masonry, 50)
+    setTimeout(this.init_masonry, 200)
   }
   init_masonry = () => {
     this.masonry = new Masonry( this.element, {
