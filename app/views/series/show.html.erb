@@ -1,46 +1,63 @@
-<% if @serie.photos.count == 1 %>
-  <div class="grid gallery">
-    <% @serie.photos.each do |photo| %>
-      <div class="one-picture-grid" >
-        <%= link_to image_path(url_for(photo)) do %> 
-          <%= cl_image_tag photo.key%>
-        <% end %> 
-      </div>
-    <% end %>
-    <div class="my-3 text-justify">
-      <div class="d-flex">
-        <h3><%= @serie.name %></h3>
-        <% if current_user %>
-          <i class="fa-solid fa-pen-to-square"></i>
-        <% end %>
-      </div>
-      <p>
-        <%= @serie.description %>
-      </p>
-    </div>
-  </div>
-<% else %>
-<div data-controller="gallery" class="grid gallery" data-masonry>
-  <div class="grid-item">
-    <div>
-      <div class="d-flex">
-        <h3><%= @serie.name %></h3>
-        <% if current_user %>
-          <%= link_to "Modifier", edit_series_path(@serie),  class:"button" %>
-        <% end %>
-      </div>
-      <p>
-        <%= @serie.description %>
-      </p>
-    </div>
-  </div>
+<%# Pour les grands écrans %>
+
+<div class="gallery-container">
+  <% if @serie.photos.count == 1 %>
+    <div class="grid gallery">
       <% @serie.photos.each do |photo| %>
-      <div class="grid-item overlay" data-gallery-target="items" >
-        <%= link_to image_path(url_for(photo)),  data: {fancybox: 'gallery'} do %> 
-          <%= cl_image_tag photo.key%>
-        <% end %> 
+        <div class="one-picture-grid" >
+          <%= link_to image_path(url_for(photo)) do %> 
+            <%= cl_image_tag photo.key%>
+          <% end %> 
+        </div>
+      <% end %>
+      <div class="my-3 text-justify">
+        <div class="d-flex">
+          <h3><%= @serie.name %></h3>
+          <% if current_user %>
+            <i class="fa-solid fa-pen-to-square"></i>
+          <% end %>
+        </div>
+        <p>
+          <%= @serie.description %>
+        </p>
       </div>
+    </div>
+  <% else %>
+  <div data-controller="gallery" class="grid gallery" data-masonry>
+    <div class="grid-item">
+      <div>
+        <div class="d-flex">
+          <h3><%= @serie.name %></h3>
+          <% if current_user %>
+            <%= link_to "Modifier", edit_series_path(@serie),  class:"button" %>
+          <% end %>
+        </div>
+        <p>
+          <%= @serie.description %>
+        </p>
+      </div>
+    </div>
+      <% @serie.photos.each do |photo| %>
+        <div class="grid-item overlay" data-gallery-target="items" >
+          <%= link_to image_path(url_for(photo)),  data: {fancybox: 'gallery'} do %> 
+            <%= cl_image_tag photo.key%>
+          <% end %> 
+        </div>
+      <% end %>
     <% end %>
+  </div>
+</div>
+
+<%# Pour les petits écrans %>
+
+
+<div class="grid-container-sx">
+  <h3><%= @serie.name %></h3>
+  <p><%= @serie.description %></p>
+  <% @serie.photos.each do |photo| %>
+    <div class="gallery-images-sx">
+      <%= cl_image_tag photo.key%>
+    </div>
   <% end %>
 </div>
 

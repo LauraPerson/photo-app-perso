@@ -36,6 +36,7 @@
 
 .text-container {
   width: 60%;
+  padding: 0px 20px;
 }
 
 #profile-container {
@@ -121,6 +122,11 @@
 }
 
 @media screen and (max-width: 350px) {
+
+  .gallery-container {
+    display: none;
+  }
+
   .container-centered {
     position: unset;
     width: 100%;
