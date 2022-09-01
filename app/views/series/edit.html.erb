@@ -5,6 +5,7 @@
       <%= simple_form_for @serie, url: series_path, method: :patch do |f| %>
         <%= f.input :name, label:"Nom"  %>
         <%= f.input :description, as: :text, label:"Description"  %>
+        <%= f.input :archive, label:"Archiver"  %>
         <%= f.input :photos, as: :file, input_html: {multiple: true}, label:"Photos de la série" %>
         <%= f.submit "Modifier la série", class:"btn btn-primary my-3" %>
       <% end %>

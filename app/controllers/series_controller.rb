@@ -4,7 +4,8 @@ class SeriesController < ApplicationController
 
 
   def index
-    @series = policy_scope(Serie.all)
+    @unarchived_series = Serie.where(archive: false)
+    @series = policy_scope(@unarchived_series)
     authorize @series
   end
 
@@ -30,7 +31,7 @@ class SeriesController < ApplicationController
   end
 
   def update
-    @serie = Serie.find(params[:id])
+    @serie = Serie.find(params[:id])    
     @serie.update(params_serie)
     authorize @serie
 
@@ -68,7 +69,7 @@ class SeriesController < ApplicationController
 
  
   def params_serie
-    params.require(:serie).permit(:name, :description, photos: [])
+    params.require(:serie).permit(:name, :description, :archive, photos: [])
   end 
 
   
