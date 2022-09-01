@@ -6,7 +6,7 @@
           Séries
         </button>
         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-          <% @series.each do |serie| %>
+          <% Serie.all.where(archive: false).each do |serie| %>
             <li><%= link_to serie.name, series_path(serie), class:"dropdown-item" %></li>
           <% end %>
         </ul>
