@@ -2,7 +2,7 @@ class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:contact, :about, :home] 
 
   def home
-    @series = Serie.all
+    @series = Serie.where(archive: false)
   end
 
   def contact
